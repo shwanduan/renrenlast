@@ -1,0 +1,6 @@
+<!--pages/member/index/aboutus.wxml-->
+<view style="width:100%;height:auto">
+    <view style="width:90%;height:425rpx;background:#FAFAFA;color:#0E0E0E;margin:0 auto;font-size:28rpx;margin-top:28rpx;padding:10rpx">
+      华为创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商，我们致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界：让无处不在的联接，成为人人平等的权利；为世界提供最强算力，让云无处不在，让智能无所不及；所有的行业和组织，因强大的数字平台而变得敏捷、高效、生机勃勃；通过AI重新定义体验，让消费者在家居、办公、出行等全场景获得极致的个性化体验。目前华为约有19.4万员工，业务遍及170多个国家和地区，服务30多亿人口。
+    </view>
+</view>

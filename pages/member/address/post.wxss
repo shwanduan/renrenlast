@@ -1,0 +1,122 @@
+@import "../../order/cycle/address.wxss";
+
+.fui-cell-group .fui-cell .intel {
+    top: -1rpx;
+}
+
+.fui-cell-group .fui-cell .remarkRotate {
+    top: 3rpx;
+}
+
+.fui-cell-group .fui-cell .intel:after {
+    content: " ";
+    display: inline-block;
+    transform: rotate(135deg);
+    height: 16rpx;
+    width: 16rpx;
+    border-width: 1px 1px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    position: relative;
+    top: -1px;
+    margin-left: 0.3em;
+    transition: 1s;
+}
+
+.fui-cell-group .fui-cell .remarkRotate:after {
+    content: " ";
+    display: inline-block;
+    transform: rotate(-45deg);
+    height: 16rpx;
+    width: 16rpx;
+    border-width: 1px 1px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    position: relative;
+    top: -1px;
+    margin-left: 0.3em;
+    transition: 1s;
+}
+
+.fui-cell-group .remark.fui-cell:before {
+    border-top: none;
+}
+
+.intelligence {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100rpx;
+    line-height: 40rpx;
+}
+
+.intelligence textarea {
+    width: 540rpx;
+    margin-top: 8rpx;
+    transition: 1s;
+    font-size: 28rpx;
+}
+
+.intelligence .line {
+    height: 70rpx;
+    width: 0;
+    border-left: 2rpx solid #999;
+    margin: 10rpx 19rpx;
+}
+
+.intelligence .copy {
+    width: 110rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    text-align: center;
+    color: #f55;
+}
+
+.fui-cell.remark.subBtn {
+    justify-content: flex-end;
+    padding-top: 0;
+}
+
+.fui-cell.remark .intelligenceSubmit {
+    width: 184rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    font-size: 28rpx;
+    border-radius: 8rpx;
+    color: #fff;
+    background: #f55;
+}
+
+.height {
+    height: 232rpx;
+    transition: 1s;
+}
+
+.color1 {
+    color: #f55;
+}
+
+.color2 {
+    color: #c8c8cd;
+}
+
+.intelColor {
+    color: #c8c8cf;
+    font-size: 28rpx;
+    font-weight: 400;
+}
+
+.showText {
+    min-height: 100rpx;
+    width: 100%;
+    height: 19rpx;
+    font-size: 28rpx;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

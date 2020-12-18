@@ -1,0 +1,24 @@
+<!--pages/shop/caregory/newpro.wxml-->
+<view style="width:100%;height:auto;">
+    <view style="width:95%;height:auto;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between">
+    <navigator url="/pages/goods/detail/index?id={{listitem.id}}" wx:for="{{prolist}}" wx:for-index="listid" wx:for-item="listitem">
+          <view style="width:340rpx;height:454rpx;margin-top:17rpx;background:white" class="" >
+             <view style="width:100%;height:365rpx;border-radius:10rpx;overflow:hidden">
+                <image src="{{listitem.thumb}}" style="width:100%;height:100%"></image>
+             </view>
+             <view style="width:100%;hegiht:60rpx;display:flex;justify-content:space-around;padding:13rpx;align-items:center">
+                 <view style="width:224rpx;height:60rpx;">
+                     <text style="color:#000000;font-size:20rpx;display:block" class="">{{listitem.title}}</text>
+                     <text style="color:#9B9B9B;font-size:20rpx;display:block" class=""> 中医名家精心配置...</text>
+                 </view>
+                 <view style="width:57rpx;height:24rpx;font-size:25.36rpx;color:#FF0000;display:flex;justify-content:center;align-items:center">
+                      ￥{{listitem.minprice}}
+                 </view>
+             </view>
+        </view>
+    
+    </navigator>
+        
+    </view>
+
+</view>

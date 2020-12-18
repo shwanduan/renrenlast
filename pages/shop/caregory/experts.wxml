@@ -1,0 +1,6 @@
+<!--pages/shop/caregory/experts.wxml-->
+<view style="width:100%;height:auto;">
+     <view style="width:95%;height:auto;margin:20rpx auto" wx:for="{{rich}}" wx:for-index="richid" wx:for-item="richitem" wx:key="richid">
+          <rich-text nodes="{{richitem.content}}" space="nbsp" ></rich-text>
+     </view>
+</view>

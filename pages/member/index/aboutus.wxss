@@ -1,0 +1,4 @@
+/* pages/member/index/aboutus.wxss */
+page{
+  background:white;
+}

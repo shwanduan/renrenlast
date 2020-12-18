@@ -1,0 +1,52 @@
+<view style="width:100%;height:auto;">
+	<view style="width:95%;height:auto;margin:0 auto;">
+
+		<view style="width:100%;height:auto;display:flex;padding:40rpx 10rpx ;flex-direction:column;align-items:flex-start;justify-content:center;border-bottom:1px solid #DBDBDB" wx:for="{{one}}" wx:for-index="listid" wx:for-item="listitem" wx:key="listid" bindtap="getTwo" data-id="{{listitem.id}}" >
+
+			<view style="display:flex">
+                  	  <view wx:if="{{show == false && listitem.id == twoValue}}"  >
+				     <image src="../../../static/images/bottom.png" style="width:24rpx;height:18rpx;"></image>
+				</view>
+				<view  wx:else>
+				     <image src="../../../static/images/right.png" style="width:18rpx;height:24rpx;"></image>
+				</view>
+                      
+				<text style="color:#000000;font-size:30rpx;margin-left:20rpx"  >{{listitem.nickname}}</text>
+			</view>
+			<view wx:if="{{listitem.id == twoValue && twoshow==true}}" style="padding-left:40rpx;padding-top:10rpx" class="">
+				<text wx:for="{{two}}" wx:for-index = "twoid" wx:for-item="twoitem" wx:key="twoid">
+				{{twoitem.nickname}}
+				</text>
+				<text wx:if="{{two.length == 0}}">暂无下级</text>
+			</view>
+		</view>
+		<!-- <view
+			style="width:100%;height:auto;display:flex;padding:40rpx 10rpx ;flex-direction:column;align-items:flex-start;justify-content:center;border-bottom:1px solid #DBDBDB"
+			wx:for="{{one}}"  wx:for-item="listitem" wx:key="listitem.id" bindtap="getTwo" data-index="{{index}}"
+			data-id="{{listitem.id}}">
+
+
+			<view style="display:flex">
+				<view wx:if="{{listitem.turnshow == true}}">
+					<image src="../../../static/images/bottom.png" style="width:24rpx;height:18rpx;"></image>
+				</view>
+				<view wx:else>
+					<image src="../../../static/images/right.png" style="width:18rpx;height:24rpx;"></image>
+				</view>
+
+				<text style="color:#000000;font-size:30rpx;margin-left:20rpx">{{listitem.nickname}}</text>
+			</view>
+			<view wx:if="{{listitem.turnshow == true && two.length !== 0}}"  style="padding-left:40rpx;padding-top:10rpx" class="">
+				<text wx:for="{{two}}" wx:for-index="twoid" wx:for-item="twoitem" wx:key="twoid">
+					{{twoitem.nickname}}
+				</text>
+				<text wx:if="{{two.length == 0}}">暂无下级</text>
+			</view>
+		</view> -->
+
+
+
+
+
+	</view>
+</view>

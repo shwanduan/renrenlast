@@ -1,0 +1,4 @@
+/* pages/shop/caregory/newpro.wxss */
+page{
+  background: #F4F4F4;
+}

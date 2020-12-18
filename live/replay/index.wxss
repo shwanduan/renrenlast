@@ -1,0 +1,11 @@
+page { overflow: hidden; }
+wx-video { height: 100vh; width: 100%; position: relative; }
+.roomInfo { position: absolute; bottom: 80rpx; width: 84%; padding: 0 64rpx; }
+.roomTitle{ height: 64rpx; font-size: 32rpx; color: #fff; font-weight: 500; line-height: 64rpx; }
+.roomAuthor{ display: -webkit-flex; display: flex; -webkit-flex-direction: row; flex-direction: row; margin: 16rpx 0; }
+.roomAuthor wx-image{ height: 64rpx; width: 64rpx; border-radius: 50%; margin-right: 24rpx; }
+.roomAuthor wx-text { color: #fff; font-size: 24rpx; font-weight: 400; height: 64rpx; line-height: 64rpx; }
+.replay_margin { margin: 0 2% 32rpx; }
+.replay_item { display: -webkit-flex; display: flex; -webkit-flex-direction: row; flex-direction: row; width: 100%; white-space: nowrap; padding: 5rpx 0; }
+.replay_btn { display: inline-block; padding: 10rpx 30rpx; border-radius: 24rpx; font-size: 24rpx; text-align: center; margin-right:16rpx; color: #fff; border: 2rpx solid #fff; font-family: PingFang SC; font-weight: 400; letter-spacing: 0rpx; box-sizing: border-box; }
+.color { color: #333; background: #fff; }

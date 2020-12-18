@@ -1,0 +1,40 @@
+<!--pages/member/index/balance.wxml-->
+<view style="width:100%;height:auto">
+	<view style="width:689rpx;height:auto;margin:0 auto">
+		<view style="width:100%;height:88rpx;display:flex;align-items:center;border-bottom:1px solid #DBDBDB">
+			<image src="../../../static/images/yue.png" style="width:34rpx;height:34rpx"></image>
+			<text style="color:#000000;font-size:28rpx;margin-left:18rpx">佣金:</text>
+			<text style="color:#FFAB3E;font-size:28rpx;margin-left:15rpx">￥{{fuckingman.member.commission_ok}}</text>
+		</view>
+
+		<navigator url="/commission/pages/apply/index">
+			<view style="width:100%;height:88rpx;display:flex;align-items:center;border-bottom:1px solid #DBDBDB; justify-content:space-between;">
+				<view style="display:flex;align-items:center; ">
+					<image src="../../../static/images/chongzhi.png" style="width:34rpx;height:34rpx"></image>
+					<text style="color:#000000;font-size:28rpx;margin-left:18rpx">提现:</text>
+
+				</view>
+				<text class="iconfont icon-youjiantou"></text>
+
+
+
+			</view>
+		</navigator>
+    
+		<navigator url="./subsidiary">
+		    <view style="width:100%;height:88rpx;display:flex;align-items:center;border-bottom:1px solid #DBDBDB;justify-content:space-between;">
+			<view style="display:flex;align-items:center; ">
+				<image src="../../../static/images/mingxi.png" style="width:34rpx;height:34rpx"></image>
+				<text style="color:#000000;font-size:28rpx;margin-left:18rpx">佣金明细:</text>
+
+			</view>
+			<text class="iconfont icon-youjiantou"></text>
+		</view>
+		
+		</navigator>
+		
+
+
+	</view>
+
+</view>

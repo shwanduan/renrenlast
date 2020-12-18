@@ -1,0 +1,9 @@
+<view style="width:100%;height:auto">
+     <view style="width:95%;height:auto;margin:0 auto">
+           <view style="width:100%;height:87rpx;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #DBDBDB" wx:for="{{list}}" wx:for-index="listid" wx:for-item="listitem" wx:key="listid">
+                 <text style="color:#000000;font-size:30rpx;width:auto">{{listitem.remark}}</text>
+                 <text style="font-size:37.43rpx;color:#FFAA3C;width:auto">{{listitem.num}}</text>    
+           </view>
+     </view>
+
+</view>

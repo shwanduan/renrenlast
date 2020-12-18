@@ -1,0 +1,13 @@
+<!--pages/member/index/withdraw.wxml-->
+<!-- <text>pages/member/index/withdraw.wxml</text> -->
+<view style="width:100%;height:auto;">
+     <view style="width:95%;height:auto;margin:0 auto;">
+        <view style="width:100%;height:88rpx;border-bottom:1px solid #DBDBDB;display:flex;align-items:center;">
+           <text style="font-size:30rpx;color:#000000">提现金额：</text>
+          <input type="number" model:value="{{value}}" placeholder="请输入提现金额" placeholder-style="color:#C2C1C0;font-size:28rpx;word-spacing:10rpx"></input>
+        </view>
+        <view style="width:100%;height:88rpx;margin-top:97rpx">
+           <button bindtap="try" style="width:100%;height:100%;color:#707070;font-size:30rpx;background:#FEECD2">确认提现</button>
+        </view>
+     </view>
+</view>

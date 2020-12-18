@@ -1,0 +1,28 @@
+.fui-list-inner {
+    font-size: 28rpx;
+}
+
+.fui-cell-group .fui-cell {
+    padding: 28rpx 20rpx;
+}
+
+.fui-cell-group .fui-cell .fui-cell-label {
+    padding-left: 0;
+}
+
+.fui-list-media img {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+#file-avatar {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    background: red;
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+<template name="tpl_list">
+    <view class="fui-goods-item">
+        <navigator hoverClass="none" openType="navigate" url="{{item.bargain>0?'../../../bargain/detail/detail?id='+item.bargain:'/pages/goods/detail/index?id='+item.id}}">
+            <view class="image" style="background-image:url({{item.thumb}})"></view>
+            <image class="salez" src="{{item.saleout}}" wx:if="{{item.saleout&&item.cansee<=0||item.saleout&&item.cansee>0&&item.seecommission<=0}}"></image>
+            <view class="goods-Commission" wx:if="{{item.cansee>0&&item.seecommission>0}}">{{item.seetitle}}￥{{item.seecommission}}</view>
+        </navigator>
+        <view class="detail goods_list_detail">
+            <navigator hoverClass="none" openType="navigate" url="{{item.bargain>0?'../../../bargain/detail/detail?id='+item.bargain:'/pages/goods/detail/index?id='+item.id}}">
+                <view class="name">
+                    <text class="cycle-tip" wx:if="{{item.type==9}}">周期购</text>
+                    <text class="cycle-tip" wx:if="{{item.bargain>0}}">砍价</text>
+                    <text>{{item.title}}</text>
+                </view>
+            </navigator>
+            <view class="original_price">
+                <text wx:if="{{item.productprice>0}}">¥{{item.productprice}}</text>
+            </view>
+            <view class="price">
+                <view class="text">¥{{item.minprice}}</view>
+                <view bindtap="selectPicker" data-buytype="buy" data-home="1" data-id="{{item.id}}" hidden="{{item.total<=0}}" wx:if="{{item.type!=9&&item.type!=5&&item.bargain==0}}">
+                    <text class="buy icox icox-gouwuche buybtnbtn buybtn-5" style="color:#ff5555"></text>
+                </view>
+                <navigator class="buy buybtnbtn buybtn-1 " style="" url="/pages/goods/detail/index?id={{item.id}}" wx:if="{{item.type==9&&item.bargain==0}}">详情</navigator>
+                <navigator class="buy buybtnbtn buybtn-1" style="" url="/pages/goods/detail/index?id={{item.id}}" wx:if="{{item.type==5&&item.bargain==0}}">详情</navigator>
+                <navigator class="buy buybtnbtn buybtn-1" style="" url="../../../bargain/detail/detail?id={{item.bargain}}" wx:if="{{item.bargain>0}}">详情</navigator>
+            </view>
+        </view>
+    </view>
+</template>
+<view class="model" wx:if="{{modelShow}}">
+    <view class="inner1">
+        <view class="title">用户未授权</view>
+        <view class="image">
+            <image src="{{imgUrl+'plugin/app/static/images/wxapp/shouquan.png'}}"></image>
+        </view>
+        <view class="subtitle">您需要先开启【用户信息】，才能使用此功能哦~</view>
+        <view class="model-btns">
+            <view bindtap="cancelclick" class="cancel">取消</view>
+            <view bindtap="confirmclick" class="confirm">去设置</view>
+        </view>
+    </view>
+</view>
+<view class="page header-sort navbar goodslist {{quick?'paddingTop':''}}">
+    <view class="fui-header">
+        <view class="searchbar">
+            <icon size="18" type="search"></icon>
+            <input bindconfirm="bindSearch" bindfocus="bindFocus" bindinput="bindInput" focus="{{focusin}}" name="search" placeholder="输入关键字进行搜索" value="{{params.keywords}}"></input>
+        </view>
+        <text bindtap="changeMode" class="icon icox {{listmode==''?'icox-app':'icox-viewlist'}}" wx:if="{{!fromsearch}}"></text>
+        <view bindtap="bindback" class="cancel" wx:if="{{fromsearch}}">取消</view>
+    </view>
+    <view class="fui-goods-group {{listmode}}">
+        <template is="tpl_list" data="{{item:item}}" wx:for="{{list}}" wx:key="{{index}}"></template>
+    </view>
+    <view class="fui-loading" wx:if="{{loading}}">
+        <view class="icon"></view>
+        <view class="text">正在加载</view>
+    </view>
+    <view class="fui-loading empty" wx:if="{{list.length==total&&total>0}}">
+        <view class="text">没有更多了</view>
+    </view>
+    <view class="fui-loading empty" wx:if="{{total<=0&&!loading}}">
+        <view class="text">暂时没有任何商品</view>
+    </view>
+    <view class="records" wx:if="{{fromsearch}}">
+        <block wx:if="{{searchRecords.length>0}}">
+            <view class="records-title">
+                <view bindtap="delRecord" class="pull-right text-danger">清除</view>
+                <view>历史搜索</view>
+            </view>
+            <view class="navs">
+                <nav bindtap="bindnav" data-text="{{item}}" wx:for="{{searchRecords}}" wx:key="{{index}}">{{item}}</nav>
+            </view>
+        </block>
+        <view class="records-title" hidden="{{true}}">
+            <view class="pull-right text-danger">换一批</view>
+            <view>热门搜索</view>
+        </view>
+        <view class="navs" hidden="{{true}}">
+            <nav bindtap="bindnav" data-text="推子">推子</nav>
+            <nav bindtap="bindnav" data-text="推子">推子</nav>
+            <nav bindtap="bindnav" data-text="推子">推子</nav>
+        </view>
+    </view>
+    <include src="/pages/common/goods-picker.wxml"></include>
+    <include src="/pages/common/menu.wxml"></include>
+    <include src="/pages/common/city-picker.wxml"></include>
+</view>
+<view class="fui-toast {{FoxUIToast.show?'in':'out'}}">
+    <view class="text">{{FoxUIToast.text}}</view>
+</view>
+<view bindtap="emptyActive" class="nav-mask" style="{{active?'display:block':''}}"></view>
+<view bindtap="showFilter" class="fui-mask {{isFilterShow?'show':'hide'}}"></view>
